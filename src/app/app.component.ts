@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -10,4 +10,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Daijo-Calculator';
+  @Output() CalculateData = new EventEmitter<string>();
+  handleClick(){
+this.CalculateData.emit('Hello World!');
+  }
 }
