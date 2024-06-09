@@ -8,11 +8,11 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <div class="container">
-  <h1 class="heading">Daijo Calculator: Hisab ra Pisab jahile Clear</h1>
+  <h1 class="heading"><del>Daijo</del>Gift Calculator: Hisab ra Pisab jahile Clear</h1>
 
   <div class="form-group">
       <label for="caste" >Your Caste</label>
- <select id="caste" name="yourscaste">
+ <select id="caste"  name="yourscaste"  [(ngModel)] = "yourCaste">
   <option>Select your caste</option>
   <option value="Brahmin">Brahmin</option>
   <option value="Chhetri">Chhetri</option>
@@ -43,7 +43,7 @@
  <!-- Bride caste -->
  <div class="form-group">
   <label for="bcaste" >Bride Caste</label>
-  <select id="bcaste" name="bridecaste">
+  <select id="bcaste" name="bridecaste" [(ngModel)] =" brideCaste">
       <option>Select her caste</option>
       <option value="Brahmin">Brahmin</option>
       <option value="Chhetri">Chhetri</option>
@@ -74,7 +74,7 @@
      <!-- Profession -->
      <div class="form-group">
       <label for="prof" >Your Profession</label>
-  <select id="prof" name="Profession">
+  <select id="prof" name="Profession" [(ngModel)] = "yourProfession">
       <option>Select your Profession</option>
          <option value="Engineer">Engineer</option>
          <option value="Doctor">Doctor</option>
@@ -89,7 +89,7 @@
          <option value="Actor">Actor</option>
        
          <option value="Singer">Singer</option>  
-         <option value="bideshi rojgar">Bideshi Rojgar</option>
+         <option value="bideshirojgar">Bideshi Rojgar</option>
       <option value="Others">Others</option>
      </select>
      </div>
@@ -98,7 +98,7 @@
   
      <div class="form-group">
       <label for="bride" >Bride Profession</label>
-      <select id="bride" name="brideprof">
+      <select id="bride" name="brideprof" [(ngModel)] = "brideProfession">
           <option>Select Bride Profession</option>
              <option value="Engineer">Engineer</option>
              <option value="Doctor">Doctor</option>
@@ -113,7 +113,7 @@
              <option value="Actor">Actor</option>
            
              <option value="Singer">Singer</option>  
-             <option value="bideshi rojgar">Bideshi Rojgar</option>
+             <option value="bideshirojgar">Bideshi Rojgar</option>
           <option value="Others">Others</option>
          </select>
      </div>
@@ -121,25 +121,25 @@
      <!-- Your Age -->
      <div class="form-group">
       <label for="age" >Your Age</label>
-      <input type="number" id="age" class="age" placeholder="Enter you age">
+      <input type="number" id="age" class="age" placeholder="Enter you age" [(ngModel)] = "yourAge">
      </div>
  
   <!-- Bride Age -->
   <div class="form-group">
       <label for="bage" >Bride Age</label>
-  <input type="number" id="bage" class="bage" placeholder="Enter brides age">
+  <input type="number" id="bage" class="bage" placeholder="Enter brides age" [(ngModel)] = "brideAge">
   </div>
 
   <div class="form-group">
       <label for="salary" >Salary</label>
-  <input type="number" id="salary" class="salary" placeholder="Enter you Salary">
+  <input type="number" id="salary" class="salary" placeholder="Enter you Salary" [(ngModel)] = "yourSalary">
   </div>
   
   <!-- Button -->
-  <button class="btn" (click)="handleClick()">Submit</button>
+  <button class="btn" (click)="Calculate()">Submit</button>
 
-  <label class="maxamt">Maximum-Amount:</label>
-  <label class="maxamt">Minimum-Amount:</label>
+  <label class="maxamt">Maximum-Amount: {{maxAmount ?? 'N/A'}}</label>
+  <label class="maxamt">Minimum-Amount:{{minAmount ?? 'N/A'}}</label>
 </div>
 
 <h2 style="color: red;">This is just a fun project. Don't take this seriously.</h2>
