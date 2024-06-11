@@ -1,12 +1,16 @@
 {
   "name": "daijo-calculator",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Gift Calculator",
+  "main": "app.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "electron": "electron .",
+    "electron-build": "ng build && electron-builder",
     "serve:ssr:Daijo-Calculator": "node dist/daijo-calculator/server/server.mjs"
   },
   "private": true,
@@ -33,6 +37,8 @@
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
@@ -40,5 +46,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.4.2"
-  }
+  },
+  "author": "Sandip Rai",
+  "license": "MIT"
 }
