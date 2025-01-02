@@ -125,6 +125,15 @@
     <input type="number" id="salary" class="salary" placeholder="Enter you Salary" [(ngModel)] = "yourSalary">
   </div>
 
+  <div class="form-group">
+    <label for="role" >Role</label>
+    <input type="text" id="role" class="role" placeholder="Enter you Role" [(ngModel)]="userRole">
+  </div>
+
+  <div *hasRole="userRole">
+    <p>You have admin access!</p>
+  </div>
+
   <!-- Button -->
   <button class="btn" (click)="Calculate()">Submit</button>
 

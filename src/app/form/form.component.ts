@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {CalculationServiceService} from "../calculation-service.service";
 import {ShowCalculationComponent} from "../show-calculation/show-calculation.component";
+import {HasRoleDirective} from "../has-role.directive";
 
 @Component({
   selector: 'app-form',
@@ -9,7 +10,8 @@ import {ShowCalculationComponent} from "../show-calculation/show-calculation.com
   imports: [
     ReactiveFormsModule,
     FormsModule,
-    ShowCalculationComponent
+    ShowCalculationComponent,
+    HasRoleDirective
   ],
   templateUrl: './form.component.html',
   styleUrl: './form.component.css',
@@ -26,6 +28,7 @@ export class FormComponent {
   yourSalary: number = 0;
   maxAmount: number = 0;
   minAmount: number = 0;
+  userRole: string = '';
 
   constructor(private service: CalculationServiceService) {
   }
